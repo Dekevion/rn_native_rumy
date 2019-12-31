@@ -43,12 +43,12 @@ const Bottom = createBottomTabNavigator({
       header: null,
     }
   },
-  MagicScreen: {
-    screen: MagicScreen,
-    navigationOptions: {
-      header: null
-    }
-  },
+  // MagicScreen: {
+  //   screen: MagicScreen,
+  //   navigationOptions: {
+  //     header: null
+  //   }
+  // },
   MapScreen: {
     screen: MapScreen,
     navigationOptions: {

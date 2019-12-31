@@ -7,6 +7,7 @@ import {
 } from "react-native";
 import MapView from 'react-native-maps';
 import {LinearGradient} from "expo-linear-gradient";
+import MagicScreen from "./MagicScreen";
 // const MapScreen = () => {
 //     return (
 //
@@ -84,6 +85,7 @@ class MapScreen extends Component {
                         longitudeDelta: 0.0421,
                     }}
                 />
+
                 <TouchableOpacity activeOpacity={0.8}>
                     <View style={styles.moveButton}>
                         <Text style={styles.editButton} onPress={() => locationPlease()}>Fetch Location</Text>
@@ -123,8 +125,8 @@ const styles = StyleSheet.create({
         left: 0,
         right: 0,
         bottom: 0,
-        width: 500,
-        height: 580
+        width: '100%',
+        height: 599
 
     },
     editButton: {
@@ -137,7 +139,10 @@ const styles = StyleSheet.create({
         padding: 1
     },
     moveButton:{
-        marginVertical: 5
+        marginVertical: '150%',
+        justifyContent: 'center',
+        alignItems: 'center'
+
     }
 });
 export default MapScreen
