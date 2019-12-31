@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Dec 30 09:30:25 CST 2019
+#Tue Dec 31 08:26:10 CST 2019
 56.path=lib/x86_64/libglog.so
 5.base=/home/student/CodeSchool/IdeaProjects/react_native/rn_native_rumy/rumy_test/rumy2.0/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
 42.base=/home/student/CodeSchool/IdeaProjects/react_native/rn_native_rumy/rumy_test/rumy2.0/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
@@ -55,6 +55,7 @@
 38.baseType=DIRECTORY
 29.baseType=DIRECTORY
 10.baseType=DIRECTORY
+66.baseType=DIRECTORY
 57.baseType=DIRECTORY
 13.set=NATIVE_RESOURCE
 53.path=lib/x86_64/libfolly_futures.so
@@ -91,7 +92,7 @@
 17.base=/home/student/CodeSchool/IdeaProjects/react_native/rn_native_rumy/rumy_test/rumy2.0/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
 27.set=NATIVE_RESOURCE
 60.set=NATIVE_RESOURCE
-count=66
+count=67
 27.base=/home/student/CodeSchool/IdeaProjects/react_native/rn_native_rumy/rumy_test/rumy2.0/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
 16.set=NATIVE_RESOURCE
 37.base=/home/student/CodeSchool/IdeaProjects/react_native/rn_native_rumy/rumy_test/rumy2.0/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
@@ -168,6 +169,7 @@ count=66
 0.path=lib/armeabi-v7a/libnative-imagetranscoder.so
 15.set=NATIVE_RESOURCE
 14.base=/home/student/CodeSchool/IdeaProjects/react_native/rn_native_rumy/rumy_test/rumy2.0/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
+66.set=ASSET
 14.baseType=DIRECTORY
 23.baseType=DIRECTORY
 65.path=lib/arm64-v8a/libjsijniprofiler.so
@@ -246,6 +248,7 @@ count=66
 1.path=lib/arm64-v8a/libyoga.so
 25.set=NATIVE_RESOURCE
 15.base=/home/student/CodeSchool/IdeaProjects/react_native/rn_native_rumy/rumy_test/rumy2.0/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
+66.path=ula.kml
 14.set=NATIVE_RESOURCE
 35.baseType=DIRECTORY
 26.baseType=DIRECTORY
@@ -262,6 +265,7 @@ count=66
 1.base=/home/student/CodeSchool/IdeaProjects/react_native/rn_native_rumy/rumy_test/rumy2.0/android/app/build/intermediates/transforms/mergeJniLibs/debug/0
 54.set=NATIVE_RESOURCE
 9.path=lib/armeabi-v7a/libreactnativejni.so
+66.base=/home/student/CodeSchool/IdeaProjects/react_native/rn_native_rumy/rumy_test/rumy2.0/android/app/build/intermediates/merged_assets/debug/mergeDebugAssets/out
 46.path=classes.dex
 5.set=NATIVE_RESOURCE
 43.set=NATIVE_RESOURCE

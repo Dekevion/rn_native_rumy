@@ -1,4 +1,4 @@
-#Mon Dec 30 09:30:24 CST 2019
+#Tue Dec 31 08:26:08 CST 2019
 base.0=/home/student/CodeSchool/IdeaProjects/react_native/rn_native_rumy/rumy_test/rumy2.0/android/app/build/intermediates/transforms/dexMerger/debug/1
 path.1=classes.dex
 renamed.1=classes2.dex

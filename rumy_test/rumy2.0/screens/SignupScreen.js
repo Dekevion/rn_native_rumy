@@ -20,7 +20,7 @@ const SignupScreen = props => {
                 </View>
                 <TextInput style={styles.input}
                            placeholder={'Enter Username'}
-                           placeholderTextColor={'rgba(#0f2027,#203a43,#2c5364,1)'}
+                           placeholderTextColor={'#ffffff'}
                            underlineColorAndroid={'transparent'}>
 
                 </TextInput>

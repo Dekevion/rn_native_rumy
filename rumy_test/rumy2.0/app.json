@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "rumy2.0",
-    "slug": "rumy2.0",
+    "name": "rumy2",
+    "slug": "rumy2",
     "privacy": "public",
     "sdkVersion": "36.0.0",
     "platforms": [
@@ -29,5 +29,5 @@
     "entryPoint": "node_modules/expo/AppEntry.js"
   },
   "displayName": "Rumy",
-  "name": "Rumy_androidStudo"
+  "name": "Rumy_androidStudio"
 }

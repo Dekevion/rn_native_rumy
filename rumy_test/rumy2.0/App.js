@@ -11,6 +11,7 @@ import LogScreen from "./screens/LogScreen";
 import Home from "./screens/Home";
 import MagicScreen from "./screens/MagicScreen";
 import {createBottomTabNavigator} from "react-navigation-tabs";
+import MapScreen from "./screens/MapScreen";
 import {AppLoading} from "expo";
 // WRAP OUTER STACK IN A CONTAINER
 const getFonts = () => Font.loadAsync({
@@ -44,6 +45,12 @@ const Bottom = createBottomTabNavigator({
   },
   MagicScreen: {
     screen: MagicScreen,
+    navigationOptions: {
+      header: null
+    }
+  },
+  MapScreen: {
+    screen: MapScreen,
     navigationOptions: {
       header: null
     }

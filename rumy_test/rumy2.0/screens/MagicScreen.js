@@ -5,7 +5,7 @@ import {
     TouchableOpacity, KeyboardAvoidingView, Dimensions, PermissionsAndroid,
 Button} from "react-native";
 import {LinearGradient} from "expo-linear-gradient";
-
+import MapScreen from "./MapScreen";
 // class MagicScreen extends Component {
 //     render() {
 //         try{
@@ -116,7 +116,7 @@ const MagicScreen = () => {
                 {
                     title: 'Access User Location Permission',
                     message: 'To Continue, turn on device location.',
-                    buttonNeutral: 'Ask Me Later',
+                    // buttonNeutral: 'Ask Me Later',
                     buttonNegative: 'Cancel',
                     buttonPositive: 'OK'
                 },
@@ -140,14 +140,12 @@ const MagicScreen = () => {
 
             <View style={styles.container}>
 
-                <Text style={styles.tex}>
-                    Where the Magic Happens!
-                </Text>
 
 
                 <TouchableOpacity activeOpacity={0.8}>
                     <View style={styles.moveButton}>
                         <Text style={styles.editButton} onPress={() => locationPlease()}>Fetch Location</Text>
+
                     </View>
                 </TouchableOpacity>
 
@@ -181,6 +179,6 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-    }
+    },
 });
 export default MagicScreen;
