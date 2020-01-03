@@ -69,7 +69,12 @@ class MapScreen extends Component {
             console.warn(e);
         }
     }
-
+    goToInitialLocation() {
+        let initialRegion = Object.assign({}, this.state.initialRegion);
+        initialRegion["latitudeDelta"] = 0.005;
+        initialRegion["longitudeDelta"] = 0.005;
+        this.mapView.animateToRegion(initialRegion, 2000);
+    }
     render() {
 
         return (
@@ -82,12 +87,20 @@ class MapScreen extends Component {
                              ref={ref => (this.mapView = ref)}
                              zoomEnabled={true}
                              showsUserLocation={true}
+                             onMapReady={this.goToInitialLocation.bind(this)}
                     >
+                        {/*<Marker coordinate = {{*/}
+                        {/*    latitude: this.state.region.latitude,*/}
+                        {/*    longitude: this.state.region.longitude,*/}
+                        {/*}}>*/}
+                        {/*</Marker>*/}
 
-                        {!!this.state.latitude && !!this.state.longitude && <MapView.Marker
-                            coordinate={{"latitude":this.state.initialRegion.latitude,"longitude":this.state.initialRegion.longitude}}
-                            title={"Your Location"}
-                        />}
+                        {/*{!!this.state.region.latitude && !!this.state.region.longitude && <MapView.Marker*/}
+                        {/*    coordinate={{"latitude":this.state.initialRegion.latitude,"longitude":this.state.initialRegion.longitude}}*/}
+                        {/*    title={"Your Location"}*/}
+                        {/*/>}*/}
+
+
                         {/*<TouchableOpacity activeOpacity={0.8}>*/}
                         {/*    <View style={styles.moveButton}>*/}
                         {/*        /!*<Text style={styles.editButton} onPress={() => locationPlease()}>Fetch Location</Text>*!/*/}
