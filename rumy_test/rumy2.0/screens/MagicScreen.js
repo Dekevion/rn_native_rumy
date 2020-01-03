@@ -5,7 +5,6 @@ import {
     TouchableOpacity, KeyboardAvoidingView, Dimensions, PermissionsAndroid,
 Button} from "react-native";
 import {LinearGradient} from "expo-linear-gradient";
-import MapScreen from "./MapScreen";
 // class MagicScreen extends Component {
 //     render() {
 //         try{

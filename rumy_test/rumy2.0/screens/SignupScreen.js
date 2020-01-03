@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
         fontFamily: 'LilitaOne-Regular',
         fontWeight: '100',
         fontSize: 32,
-        borderBottomWidth: 1,
+
         color: "#fffafa",
         marginBottom: 15,
 

@@ -75,12 +75,18 @@ const Bottom = createBottomTabNavigator({
 
 const Navigation = createAppContainer(Bottom);
 
+
 const App = () => {
+  // const state = {
+  // userLocation: null
+  // };
+
   const [fontsLoaded, setFontsLoaded] = useState(false);
   if(fontsLoaded) {
+
     return (
 
-        <Navigation />
+        <Navigation  />
         //     <View style={styles.container}>
         //         <StatusBar bar Style = "dark-content" hidden = {false} backgroundColor = "#80d8ff" translucent = {true}/>
         //
