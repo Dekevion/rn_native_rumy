@@ -20,7 +20,7 @@ class MapScreen extends Component {
             error: null,
         };
     }
-     componentDidMount()
+      componentDidMount()
       {
         try {
             {
@@ -28,10 +28,10 @@ class MapScreen extends Component {
                     let region = {
                         latitude: parseFloat(position.coords.latitude),
                         longitude: parseFloat(position.coords.longitude),
-                        latitudeDelta: 5,
-                        longitudeDelta: 5
+                        latitudeDelta: 0.00111,
+                        longitudeDelta: 0.0123,
                     };
-                    this.setState({
+                     this.setState({
                         initialRegion: region
                     });
                     console.log("State Latitude: " + this.region.latitude);
@@ -69,12 +69,13 @@ class MapScreen extends Component {
             console.warn(e);
         }
     }
-    goToInitialLocation() {
-        let initialRegion = Object.assign({}, this.state.initialRegion);
-        initialRegion["latitudeDelta"] = 0.005;
-        initialRegion["longitudeDelta"] = 0.005;
-        this.mapView.animateToRegion(initialRegion, 2000);
-    }
+
+    // goToInitialLocation() {
+    //     let initialRegion = Object.assign({}, this.state.initialRegion);
+    //     initialRegion["latitudeDelta"] = 0.005;
+    //     initialRegion["longitudeDelta"] = 0.005;
+    //     this.mapView.animateToRegion(initialRegion, 2000);
+    // }
     render() {
 
         return (
@@ -87,7 +88,7 @@ class MapScreen extends Component {
                              ref={ref => (this.mapView = ref)}
                              zoomEnabled={true}
                              showsUserLocation={true}
-                             onMapReady={this.goToInitialLocation.bind(this)}
+                             // onMapReady={this.goToInitialLocation.bind(this)}
                     >
                         {/*<Marker coordinate = {{*/}
                         {/*    latitude: this.state.region.latitude,*/}
