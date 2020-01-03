@@ -76,6 +76,9 @@ class MapScreen extends Component {
     //     initialRegion["longitudeDelta"] = 0.005;
     //     this.mapView.animateToRegion(initialRegion, 2000);
     // }
+    addLocation () {
+        console.log('please')
+    }
     render() {
 
         return (
@@ -102,14 +105,15 @@ class MapScreen extends Component {
                         {/*/>}*/}
 
 
-                        {/*<TouchableOpacity activeOpacity={0.8}>*/}
-                        {/*    <View style={styles.moveButton}>*/}
-                        {/*        /!*<Text style={styles.editButton} onPress={() => locationPlease()}>Fetch Location</Text>*!/*/}
 
-                        {/*    </View>*/}
-                        {/*</TouchableOpacity>*/}
 
                     </MapView>
+                    <TouchableOpacity activeOpacity={0.8}>
+                        <View style={styles.moveButton}>
+                            <Text style={styles.editButton} onPress={() => this.addLocation()}>Add Location</Text>
+                            {/*    <Button title={'please'} style={styles.editButton}/>*/}
+                        </View>
+                    </TouchableOpacity>
                 </View>
             </LinearGradient>
 
