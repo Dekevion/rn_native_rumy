@@ -8,6 +8,7 @@ import {
 import MapView, {Marker} from 'react-native-maps';
 import {LinearGradient} from "expo-linear-gradient";
 import {AnimatedRegion} from "react-native-maps";
+
 // import MagicScreen from "./MagicScreen";
 
 class MapScreen extends Component {
@@ -18,63 +19,79 @@ class MapScreen extends Component {
             latitude: 0,
             longitude: 0,
             error: null,
-            markers: [{
-                coordinates: {
-                    latitude: 0,
-                    longitude: 0,
-                }
-            }]
+            array: [],
+            markers: {
+               latitude: 0,
+                longitude: 0
+            }
         };
 
     }
-      componentDidMount()
-      {
-        try {
-            {
-                navigator.geolocation.getCurrentPosition(position => {
-                    let region = {
-                        latitude: parseFloat(position.coords.latitude),
-                        longitude: parseFloat(position.coords.longitude),
-                        latitudeDelta: 0.00111,
-                        longitudeDelta: 0.0123,
-                    };
-                     this.setState({
-                        initialRegion: region
-                    });
-                    console.log("State Latitude: " + this.region.latitude);
-                    console.log("State Longitude: " + this.region.longitude);
 
-                    console.log("Your  Position: Latitude " + position.coords.latitude);
-                    console.log("Your Position: Longitude " + position.coords.longitude);
+    componentDidMount() {
 
-                    console.log('After Position is logged')
-                }, error => console.log(error)),
-                    {
-                        enableHighAccuracy: true,
-                        timeout: 20000,
-                        maximumAge: 1000
-                    };
-                const granted = PermissionsAndroid.request(
-                    PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
-                    {
-                        title: 'Access User Location Permission',
-                        message: 'To Continue, turn on device location.',
-                        // buttonNeutral: 'Ask Me Later',
-                        buttonNegative: 'Cancel',
-                        buttonPositive: 'OK'
-                    },
-                );
-                // if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-                //     console.log('You can use the map');
-                // } else {
-                //     console.log('Permission Denied')
-                // }
-                // console.log(this.state.userLocation);
+        {
+            navigator.geolocation.getCurrentPosition(position => {
+                let region = {
+                    latitude: (position.coords.latitude),
+                    longitude: (position.coords.longitude),
+                    latitudeDelta: 0.00111,
+                    longitudeDelta: 0.0123,
+                };
+                this.setState({
+                    initialRegion: region
+                });
+                const url = "http://10.0.0.9:8000/coordinate/";
+                fetch(url, {
+                    method: 'POST',
+                    body: JSON.stringify({
+                        latitude: this.state.initialRegion.latitude,
+                        longitude: this.state.initialRegion.longitude
+                    }),
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    }
+                })
+                    .then(data => data.json());
+                    // .then(response => console.log(response));
+                // console.log("Latitude: " + position.coords.latitude);
+                // console.log("Longitude: " + position.coords.longitude);
+                // console.log("initialRegion Latitude: " + this.state.initialRegion.latitude);
+                // console.log("initialRegion Longitude: " + this.state.initialRegion.longitude);
 
-            }
-        } catch (e) {
-            console.warn(e);
+
+                // console.log("State Longitude: " + this.region.longitude);
+                //
+                // console.log("Your  Position: Latitude " + position.coords.latitude);
+                // console.log("Your Position: Longitude " + position.coords.longitude);
+
+                console.log('After Position is logged')
+            }, error => console.log(error));
+            // {
+            //     enableHighAccuracy: true,
+            //     timeout: 20000,
+            //     maximumAge: 1000
+            // };
+            const granted = PermissionsAndroid.request(
+                PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+                {
+                    title: 'Access User Location Permission',
+                    message: 'To Continue, turn on device location.',
+                    // buttonNeutral: 'Ask Me Later',
+                    buttonNegative: 'Cancel',
+                    buttonPositive: 'OK'
+                },
+            );
+            // if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+            //     console.log('You can use the map');
+            // } else {
+            //     console.log('Permission Denied')
+            // }
+            // console.log(this.state.userLocation);
+
         }
+
     }
 
     // goToInitialLocation() {
@@ -83,27 +100,73 @@ class MapScreen extends Component {
     //     initialRegion["longitudeDelta"] = 0.005;
     //     this.mapView.animateToRegion(initialRegion, 2000);
     // }
-    addLocation () {
-        const url = "http://10.0.0.9:8000/user";
-        fetch(url, {
-            method: 'POST',
-            body: JSON.stringify({
-                latitude: parseFloat(position.coords.latitude),
-                longitude: parseFloat(position.coords.longitude),
-            })
-        })
-            .then(response => console.log(response))
-            .catch(err => console.log(err))
 
-        }
+    // addLocation () {
+    //     const url = "http://10.0.0.9:8000/coords";
+    //     fetch(url, {
+    //         method: 'POST',
+    //         body: JSON.stringify({
+    //             latitude: position.coords.latitude,
+    //             longitude: position.coords.longitude,
+    //         })
+    //     })
+    //         .then(response => console.log(response))
+    //         .catch(err => console.log(err))
+    //
+    //     }
+
+    fetchLocations() {
+        const url = "http://10.0.0.9:8000/coordinate/";
+        fetch(url)
+            .then(response => response.json())
+            // .then(data => console.log(data))
+            // .then(coordinates => {
+            //     const coordArray = [];
+            //     for (const key in coordinates) {
+            //       latitude: coordinates[key].latitude,
+            //         longitude: coordinates[key].longitude,
+            //             id: key
+            //     };
+            .then(coordinates => {
+                let user_position = coordinates.map((each_element) => {
+                    return (
+                        <MapView.Marker key={each_element.id} coordinate={{
+                            latitude: parseFloat(each_element.latitude),
+                            longitude: parseFloat(each_element.longitude)
+                        }}
+                        title={'my location'}>
+
+                        </MapView.Marker>
+                    )
+                } );
+                this.setState({
+                    markers: user_position
+                });
+                console.log(this.state.markers)
+            });
 
 
+
+                        // id: each_element.id,
+                        // latlng: {
+                        //     latitude: each_element.latitude,
+                        //     longitude: each_element.longitude
+                        // }
+
+                // this.setState({
+                //     markers: user_position,
+                //     array: user_position
+                //
+                // });
+                // console.log(this.state.markers)
+                //
+                // } );
+
+
+
+    }
 
     render() {
-        let userLocationMarker = null;
-        // if(this.state.initialRegion) {
-        //     userLocationMarker = <MapView.Marker coordinate={this.state.initialRegion}/>
-        // }
 
         return (
             <LinearGradient colors={['#0f2027', '#203a43', '#2c5364']}
@@ -115,28 +178,29 @@ class MapScreen extends Component {
                              ref={ref => (this.mapView = ref)}
                              zoomEnabled={true}
                              showsUserLocation={true}
-                             // onMapReady={this.goToInitialLocation.bind(this)}
+
                     >
-                        {/*<MapView.Marker coordinate = {{*/}
-                        {/*    latitude: this.state.initialRegion,*/}
-                        {/*    longitude: this.state.initialRegion,*/}
-                        {/*}}>*/}
-                        {/*</MapView.Marker>*/}
+                        {/*{this.state.markers.map (marker => (*/}
+                        {/*    <MapView.Marker key={marker.key}*/}
+                        {/*    coordinate={{*/}
+                        {/*        latitude: marker.latitude,*/}
+                        {/*        longitude: marker.longitude*/}
+                        {/*    }}>*/}
+
+                        {/*    </MapView.Marker>*/}
+                        {/*))}*/}
 
                         {/*{!!this.state.region.latitude && !!this.state.region.longitude && <MapView.Marker*/}
                         {/*    coordinate={{"latitude":this.state.initialRegion.latitude,"longitude":this.state.initialRegion.longitude}}*/}
                         {/*    title={"Your Location"}*/}
                         {/*/>}*/}
 
-
-
-
                     </MapView>
 
-                        <View style={styles.moveButton}>
-                            <Text style={styles.editButton} onPress={() => this.addLocation()}>Add Location</Text>
-                            {/*    <Button title={'please'} style={styles.editButton}/>*/}
-                        </View>
+                    <View style={styles.moveButton}>
+                        <Text style={styles.editButton} onPress={() => this.fetchLocations()}>Grab Locations</Text>
+                        {/*    <Button title={'please'} style={styles.editButton}/>*/}
+                    </View>
 
                 </View>
             </LinearGradient>
@@ -219,12 +283,12 @@ export default MapScreen
 //             buttonPositive: 'OK'
 //         },
 //     );
-    // if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-    //     console.log('You can use the map');
-    // } else {
-    //     console.log('Permission Denied')
-    // }
-    // console.log(this.state.userLocation);
+// if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+//     console.log('You can use the map');
+// } else {
+//     console.log('Permission Denied')
+// }
+// console.log(this.state.userLocation);
 
 //                 }
 //             } catch (e) {
