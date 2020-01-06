@@ -25,9 +25,7 @@ def client_to_server(request):
                     "logged_in": True,
                     "username": user_verify[0].username,
                     "password": user_verify[0].password,
-                    "id": user_verify[0].id,
-                    "bio": user_verify[0].bio,
-                    "age": user_verify[0].age,
+
                 }
 
             )

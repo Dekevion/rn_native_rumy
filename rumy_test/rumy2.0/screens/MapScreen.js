@@ -15,10 +15,17 @@ class MapScreen extends Component {
         super();
         this.state = {
 
-            latitude: null,
-            longitude: null,
+            latitude: 0,
+            longitude: 0,
             error: null,
+            markers: [{
+                coordinates: {
+                    latitude: 0,
+                    longitude: 0,
+                }
+            }]
         };
+
     }
       componentDidMount()
       {
@@ -77,9 +84,26 @@ class MapScreen extends Component {
     //     this.mapView.animateToRegion(initialRegion, 2000);
     // }
     addLocation () {
-        console.log('please')
-    }
+        const url = "http://10.0.0.9:8000/user";
+        fetch(url, {
+            method: 'POST',
+            body: JSON.stringify({
+                latitude: parseFloat(position.coords.latitude),
+                longitude: parseFloat(position.coords.longitude),
+            })
+        })
+            .then(response => console.log(response))
+            .catch(err => console.log(err))
+
+        }
+
+
+
     render() {
+        let userLocationMarker = null;
+        // if(this.state.initialRegion) {
+        //     userLocationMarker = <MapView.Marker coordinate={this.state.initialRegion}/>
+        // }
 
         return (
             <LinearGradient colors={['#0f2027', '#203a43', '#2c5364']}
@@ -93,11 +117,11 @@ class MapScreen extends Component {
                              showsUserLocation={true}
                              // onMapReady={this.goToInitialLocation.bind(this)}
                     >
-                        {/*<Marker coordinate = {{*/}
-                        {/*    latitude: this.state.region.latitude,*/}
-                        {/*    longitude: this.state.region.longitude,*/}
+                        {/*<MapView.Marker coordinate = {{*/}
+                        {/*    latitude: this.state.initialRegion,*/}
+                        {/*    longitude: this.state.initialRegion,*/}
                         {/*}}>*/}
-                        {/*</Marker>*/}
+                        {/*</MapView.Marker>*/}
 
                         {/*{!!this.state.region.latitude && !!this.state.region.longitude && <MapView.Marker*/}
                         {/*    coordinate={{"latitude":this.state.initialRegion.latitude,"longitude":this.state.initialRegion.longitude}}*/}
@@ -108,12 +132,12 @@ class MapScreen extends Component {
 
 
                     </MapView>
-                    <TouchableOpacity activeOpacity={0.8}>
+
                         <View style={styles.moveButton}>
                             <Text style={styles.editButton} onPress={() => this.addLocation()}>Add Location</Text>
                             {/*    <Button title={'please'} style={styles.editButton}/>*/}
                         </View>
-                    </TouchableOpacity>
+
                 </View>
             </LinearGradient>
 
