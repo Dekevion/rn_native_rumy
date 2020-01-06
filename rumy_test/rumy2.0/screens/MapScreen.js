@@ -21,8 +21,10 @@ class MapScreen extends Component {
             error: null,
             array: [],
             markers: {
-               latitude: 0,
-                longitude: 0
+                latlng: {
+                    latitude: 0,
+                    longitude: 0
+                }
             }
         };
 
@@ -116,7 +118,7 @@ class MapScreen extends Component {
     //     }
 
     fetchLocations() {
-        const url = "http://10.0.0.9:8000/coordinate/";
+        const url = "http://10.0.0.3:8000/coordinate/";
         fetch(url)
             .then(response => response.json())
             // .then(data => console.log(data))
@@ -140,7 +142,9 @@ class MapScreen extends Component {
                     )
                 } );
                 this.setState({
-                    markers: user_position
+                    markers: {
+                        user_position
+                    }
                 });
                 console.log(this.state.markers)
             });
@@ -180,17 +184,14 @@ class MapScreen extends Component {
                              showsUserLocation={true}
 
                     >
-                        {/*{this.state.markers.map (marker => (*/}
-                        {/*    <MapView.Marker key={marker.key}*/}
-                        {/*    coordinate={{*/}
-                        {/*        latitude: marker.latitude,*/}
-                        {/*        longitude: marker.longitude*/}
-                        {/*    }}>*/}
+                        {/*{this.state.markers.map(marker => (*/}
+                        {/*    <Marker*/}
+                        {/*        coordinate={marker.latlng}*/}
 
-                        {/*    </MapView.Marker>*/}
+                        {/*    />*/}
                         {/*))}*/}
 
-                        {/*{!!this.state.region.latitude && !!this.state.region.longitude && <MapView.Marker*/}
+                        {/*{!!this.state.initialRegion.latitude && !!this.state.initialRegion.longitude && <MapView.Marker*/}
                         {/*    coordinate={{"latitude":this.state.initialRegion.latitude,"longitude":this.state.initialRegion.longitude}}*/}
                         {/*    title={"Your Location"}*/}
                         {/*/>}*/}
