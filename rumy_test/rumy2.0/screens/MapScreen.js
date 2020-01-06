@@ -186,9 +186,13 @@ class MapScreen extends Component {
 
                     >
 
-                    <Marker coordinate={{latitude:35.0186924, longitude: -89.7866348}} title={'why'}/>
+                    <Marker coordinate={{latitude:35.13882623, longitude: -90.0387654}} title={"I'm Here!"}/>
+                        <Marker coordinate={{latitude:35.19682623, longitude: -90.1287654}} title={"I'm Here!"}/>
+                        <Marker coordinate={{latitude:35.18684625, longitude: -90.3277654}} title={"I'm Here!"}/>
+                        <Marker coordinate={{latitude:35.18682623, longitude: -90.2277654}} title={"I'm Here!"}/>
 
 
+                        {/*{this.state.markers.map((marker, index) => ( <MapView.Marker key={index} coordinate={marker.coordinates} title={marker.title} /> ))}*/}
 
                     </MapView>
 
