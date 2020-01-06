@@ -16,16 +16,11 @@ class MapScreen extends Component {
         super();
         this.state = {
 
-            latitude: 0,
-            longitude: 0,
+            latitude: null,
+            longitude: null,
             error: null,
             array: [],
-            markers: {
-                latlng: {
-                    latitude: 0,
-                    longitude: 0
-                }
-            }
+           markers: [],
         };
 
     }
@@ -43,19 +38,23 @@ class MapScreen extends Component {
                 this.setState({
                     initialRegion: region
                 });
-                const url = "http://10.0.0.9:8000/coordinate/";
-                fetch(url, {
-                    method: 'POST',
-                    body: JSON.stringify({
-                        latitude: this.state.initialRegion.latitude,
-                        longitude: this.state.initialRegion.longitude
-                    }),
-                    headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json'
-                    }
-                })
-                    .then(data => data.json());
+                // const url = "http://10.0.0.3:8000/coordinate/";
+                // fetch(url, {
+                //     method: 'POST',
+                //     body: JSON.stringify({
+                //         latitude: this.state.initialRegion.latitude,
+                //         longitude: this.state.initialRegion.longitude
+                //     }),
+                //     headers: {
+                //         'Accept': 'application/json',
+                //         'Content-Type': 'application/json'
+                //     }
+                // })
+                //     .then(data => data.json());
+
+
+
+
                     // .then(response => console.log(response));
                 // console.log("Latitude: " + position.coords.latitude);
                 // console.log("Longitude: " + position.coords.longitude);
@@ -132,18 +131,20 @@ class MapScreen extends Component {
             .then(coordinates => {
                 let user_position = coordinates.map((each_element) => {
                     return (
-                        <MapView.Marker key={each_element.id} coordinate={{
+                        <Marker key={each_element.id} coordinate={{
                             latitude: parseFloat(each_element.latitude),
                             longitude: parseFloat(each_element.longitude)
                         }}
                         title={'my location'}>
 
-                        </MapView.Marker>
+                        </Marker>
                     )
                 } );
                 this.setState({
                     markers: {
-                        user_position
+                        latlng: {
+                            user_position
+                        }
                     }
                 });
                 console.log(this.state.markers)
@@ -184,17 +185,11 @@ class MapScreen extends Component {
                              showsUserLocation={true}
 
                     >
-                        {/*{this.state.markers.map(marker => (*/}
-                        {/*    <Marker*/}
-                        {/*        coordinate={marker.latlng}*/}
 
-                        {/*    />*/}
-                        {/*))}*/}
-
-                        {/*{!!this.state.initialRegion.latitude && !!this.state.initialRegion.longitude && <MapView.Marker*/}
-                        {/*    coordinate={{"latitude":this.state.initialRegion.latitude,"longitude":this.state.initialRegion.longitude}}*/}
-                        {/*    title={"Your Location"}*/}
-                        {/*/>}*/}
+                    {/*<Marker coordinate={{*/}
+                    {/*    latitude:35.0186924,*/}
+                    {/*    longitude*/}
+                    {/*}}> </Marker>*/}
 
                     </MapView>
 
