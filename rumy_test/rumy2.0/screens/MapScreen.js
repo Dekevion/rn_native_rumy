@@ -117,7 +117,7 @@ class MapScreen extends Component {
     //     }
 
     fetchLocations() {
-        const url = "http://10.0.0.3:8000/coordinate/";
+        const url = "http://10.152.29.77:8000/coordinate/";
         fetch(url)
             .then(response => response.json())
             // .then(data => console.log(data))
@@ -190,6 +190,8 @@ class MapScreen extends Component {
                         <Marker coordinate={{latitude:35.19682623, longitude: -90.1287654}} title={"I'm Here!"}/>
                         <Marker coordinate={{latitude:35.18684625, longitude: -90.3277654}} title={"I'm Here!"}/>
                         <Marker coordinate={{latitude:35.18682623, longitude: -90.2277654}} title={"I'm Here!"}/>
+                        <Marker coordinate={{latitude:35.138888, longitude: -90.038973}} title={"I'm Here!"}/>
+
 
 
                         {/*{this.state.markers.map((marker, index) => ( <MapView.Marker key={index} coordinate={marker.coordinates} title={marker.title} /> ))}*/}
