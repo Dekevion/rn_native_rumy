@@ -186,10 +186,9 @@ class MapScreen extends Component {
 
                     >
 
-                    {/*<Marker coordinate={{*/}
-                    {/*    latitude:35.0186924,*/}
-                    {/*    longitude*/}
-                    {/*}}> </Marker>*/}
+                    <Marker coordinate={{latitude:35.0186924, longitude: -89.7866348}} title={'why'}/>
+
+
 
                     </MapView>
 
