@@ -9,8 +9,110 @@ import Forms from "../Components/Forms";
 import {LinearGradient} from "expo-linear-gradient";
 import Icon from "react-native-vector-icons/Ionicons";
 const {width: WIDTH} = Dimensions.get('window');
-const SignupScreen = props => {
-    return (
+class SignupScreen extends Component  {
+    constructor() {
+        super();
+        this.state = {
+                isLoggedIn: false,
+                userId: 0,
+                name: "",
+                password: "",
+
+        };
+
+    }
+        updateValue (text, field){
+        // console.log(text)
+            if (field == 'name'){
+                this.setState({
+                    name: text
+                })
+            }
+            else if (field == 'password'){
+                this.setState({
+                    password: text
+                })
+            }
+        }
+        createUser = async () => {
+        let collection = {}
+                collection.name = this.state.name,
+                collection.password = this.state.password,
+            console.log(collection)
+
+
+            const userBody = collection;
+            const url = "http://10.0.0.3:8000/user/";
+// FETCH ATTEMPT 1
+            // const url = "http://10.0.0.3:8000/coordinate/";
+            fetch(url, {
+                method: 'POST',
+                body: JSON.stringify({
+                    // latitude: this.state.initialRegion.latitude,
+                    // longitude: this.state.initialRegion.longitude
+                    name: userBody.name,
+                    password: userBody.password
+                }),
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(data => data.json());
+
+
+
+
+            // fetch(url, {
+            //     method: 'GET',
+            //     headers: {
+            //         Accept: 'application/json',
+            //     }
+            // })
+            //     .then(response => response.json())
+            //     .then(data => console.log(data))
+
+
+
+                // .then(resp=> {
+                //     console.log("Response1");
+                //     if(resp === false)
+                //     {
+                //         this.setState({new_user_error_msg: "Username is already taken!"});
+                //     } else {
+                //         console.log("response2: " + resp);
+                //         this.setState({
+                //             isLoggedIn: true,
+                //             name: resp.name,
+                //             userID: resp.id
+                //         })
+                //     }
+                // });
+
+
+
+            // FETCH ATTEMPT 2
+        //     fetch(url, {
+        //         method: 'POST', // or 'PUT'
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //         },
+        //         body: JSON.stringify(userBody),
+        //     })
+        //         .then((response) => response.json())
+        //         .then((data) => {
+        //             console.log('Success:', data);
+        //         })
+        //         .catch((error) => {
+        //             console.error('Error:', error);
+        //         });
+
+
+
+        }
+    render() {
+
+        return (
         <View style = {styles.container}>
             <LinearGradient colors={['#0f2027', '#203a43', '#2c5364']} style={{flex: 1, alignItems: 'center', justifyContent: "center", width:'100%' }}>
                 <View>
@@ -18,20 +120,23 @@ const SignupScreen = props => {
                         Register
                     </Text>
                 </View>
+
                 <TextInput style={styles.input}
-                           placeholder={'Enter Username'}
+                           placeholder={'Enter username'}
                            placeholderTextColor={'#ffffff'}
-                           underlineColorAndroid={'transparent'}>
+                           underlineColorAndroid={'transparent'}
+                           onChangeText={(text) => this.updateValue(text, 'name')}>
 
                 </TextInput>
                 <View style={styles.divider}>
 
                 </View>
+
                 <TextInput style={styles.input}
                            placeholder={'Enter Password'}
-                           secureTextEntry={true}
                            placeholderTextColor={'#ffffff'}
-                           underlineColorAndroid={'transparent'}>
+                           underlineColorAndroid={'transparent'}
+                           onChangeText={(text) => this.updateValue(text, 'password')}>
 
                 </TextInput>
 
@@ -41,9 +146,10 @@ const SignupScreen = props => {
                 <View style={styles.pushUp}>
                     <TouchableOpacity activeOpacity={0.8}>
                         <View style={styles.moveButton}>
-                            <Text style={styles.editButton} onPress={() => navigate('LogScreen')}>Register</Text>
+                            <Text style={styles.editButton} onPress={() => this.createUser()}>Register</Text>
                         </View>
                     </TouchableOpacity>
+                    {this.state.new_user_error_msg}
                 </View>
 
             </LinearGradient>
@@ -51,7 +157,8 @@ const SignupScreen = props => {
 
         </View>
     )
-};
+    };
+}
 
 
 const styles = StyleSheet.create({

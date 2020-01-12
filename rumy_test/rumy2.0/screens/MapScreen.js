@@ -117,7 +117,7 @@ class MapScreen extends Component {
     //     }
 
     fetchLocations() {
-        const url = "http://10.152.29.77:8000/coordinate/";
+        const url = "http://10.0.0.3:8000/coordinate/";
         fetch(url)
             .then(response => response.json())
             // .then(data => console.log(data))

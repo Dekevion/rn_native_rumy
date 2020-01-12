@@ -6,7 +6,7 @@ from .models import UserModel, CoordinatesModel
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = UserModel
-        fields = ['id', 'username', 'password']
+        fields = ['id', 'name', 'password']
         # extra_kwargs = {'password': {'write_only': True, 'required': True}}
 
 

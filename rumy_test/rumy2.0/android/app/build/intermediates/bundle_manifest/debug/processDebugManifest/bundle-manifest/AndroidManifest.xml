@@ -51,7 +51,7 @@
         android:theme="@style/AppTheme" >
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCFynq72N2d4a88pjI_5DQsRq29RaxoHDc" />
+            android:value="AIzaSyCTs7jopGhfr8p2NG43XT9HgAwe_DIHoBs" />
 
         <activity
             android:name="com.rumy_androidstudo.MainActivity"

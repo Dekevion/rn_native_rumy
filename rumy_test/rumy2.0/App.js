@@ -27,6 +27,7 @@ const HomeStack = createStackNavigator({
     navigationOptions: {
       header: null,
     }
+
   },
 });
 const Bottom = createBottomTabNavigator({

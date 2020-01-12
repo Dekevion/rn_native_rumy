@@ -48,14 +48,6 @@ MERGED from [androidx.recyclerview:recyclerview:1.0.0] /home/student/.gradle/cac
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/legacy-support-core-ui-1.0.0.aar/ed89896652b45ec995b33dca8a32868c/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-1.0.0.aar/b0c3a3c80a0b275f396c5c8c4ab0c056/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.transition:transition:1.1.0] /home/student/.gradle/caches/transforms-1/files-1.1/transition-1.1.0.aar/75dff1be7e25f0a2192de1d550998d16/AndroidManifest.xml:17:1-22:12
-MERGED from [com.facebook.fresco:fresco:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/fresco-2.0.0.aar/fb112ac8a571f5d5c3d09d9f285a7063/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-2.0.0.aar/f4b7338c39ae09fbb9144b08fe2f0aa8/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:drawee:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/drawee-2.0.0.aar/353ff8d2530462f2bd011ef88f04f481/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/nativeimagefilters-2.0.0.aar/8e03a1deadd75b3c21dfd9918744481b/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/imagepipeline-2.0.0.aar/c1ba99f2a092d2cea3f4841cc29d7a9f/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/nativeimagetranscoder-2.0.0.aar/854c55061c3d20215c65847af63f2b6d/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-2.0.0.aar/be9cfc368a4ab1640ddd5a8df624f967/AndroidManifest.xml:2:1-9:12
-MERGED from [com.facebook.soloader:soloader:0.6.0] /home/student/.gradle/caches/transforms-1/files-1.1/soloader-0.6.0.aar/f4d415ac29b15fcb27e0beb81a9f14c0/AndroidManifest.xml:2:1-13:12
 MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/student/.gradle/caches/transforms-1/files-1.1/jetified-glide-4.9.0.aar/1df2095e0be2dad7b5d94736f6c11dc6/AndroidManifest.xml:2:1-12:12
 MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/student/.gradle/caches/transforms-1/files-1.1/jetified-gifdecoder-4.9.0.aar/c759c1a341e2165b051d52118b3ccadf/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.fragment:fragment:1.1.0] /home/student/.gradle/caches/transforms-1/files-1.1/fragment-1.1.0.aar/29f2adcb3bd1feb9416c6e02c3e6757c/AndroidManifest.xml:17:1-24:12
@@ -86,7 +78,15 @@ MERGED from [androidx.savedstate:savedstate:1.0.0] /home/student/.gradle/caches/
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-2.0.0.aar/2d4944d2747a74adf59abe276f6c05dd/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.0.0.aar/4b1c76cad9994989ddab9e16359e1bc2/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/core-runtime-2.0.0.aar/ca45b8b7004ccc4ef5e70f1b165653c4/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-2.0.0.aar/f4b7338c39ae09fbb9144b08fe2f0aa8/AndroidManifest.xml:2:1-9:12
 MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/student/.gradle/caches/transforms-1/files-1.1/jetified-library-3.2.11.aar/bbb3c9a09cce7d2c775d1f91ac7245fe/AndroidManifest.xml:2:1-30:12
+MERGED from [com.facebook.fresco:fresco:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/fresco-2.0.0.aar/fb112ac8a571f5d5c3d09d9f285a7063/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:drawee:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/drawee-2.0.0.aar/353ff8d2530462f2bd011ef88f04f481/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/nativeimagefilters-2.0.0.aar/8e03a1deadd75b3c21dfd9918744481b/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/imagepipeline-2.0.0.aar/c1ba99f2a092d2cea3f4841cc29d7a9f/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/nativeimagetranscoder-2.0.0.aar/854c55061c3d20215c65847af63f2b6d/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-2.0.0.aar/be9cfc368a4ab1640ddd5a8df624f967/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/student/.gradle/caches/transforms-1/files-1.1/soloader-0.6.0.aar/f4d415ac29b15fcb27e0beb81a9f14c0/AndroidManifest.xml:2:1-13:12
 MERGED from [com.facebook.fresco:fbcore:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/jetified-fbcore-2.0.0.aar/f2945128c29d5e0fb65d2a4c59fbed97/AndroidManifest.xml:2:1-9:12
 INJECTED from /home/student/CodeSchool/IdeaProjects/react_native/rn_native_rumy/rumy_test/rumy2.0/android/app/src/main/AndroidManifest.xml:1:1-51:12
 INJECTED from /home/student/CodeSchool/IdeaProjects/react_native/rn_native_rumy/rumy_test/rumy2.0/android/app/src/main/AndroidManifest.xml:1:1-51:12
@@ -221,8 +221,6 @@ MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /ho
 MERGED from [com.google.android.gms:play-services-places-placereport:16.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/play-services-places-placereport-16.0.0.aar/146d3e5f6cecd546159d4b3a64813032/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-basement:16.2.0] /home/student/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.2.0.aar/ffcab8a2f7acae33f064901bdf25c778/AndroidManifest.xml:22:5-26:19
 MERGED from [com.google.android.gms:play-services-basement:16.2.0] /home/student/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.2.0.aar/ffcab8a2f7acae33f064901bdf25c778/AndroidManifest.xml:22:5-26:19
-MERGED from [com.facebook.soloader:soloader:0.6.0] /home/student/.gradle/caches/transforms-1/files-1.1/soloader-0.6.0.aar/f4d415ac29b15fcb27e0beb81a9f14c0/AndroidManifest.xml:11:5-20
-MERGED from [com.facebook.soloader:soloader:0.6.0] /home/student/.gradle/caches/transforms-1/files-1.1/soloader-0.6.0.aar/f4d415ac29b15fcb27e0beb81a9f14c0/AndroidManifest.xml:11:5-20
 MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/student/.gradle/caches/transforms-1/files-1.1/jetified-glide-4.9.0.aar/1df2095e0be2dad7b5d94736f6c11dc6/AndroidManifest.xml:10:5-20
 MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/student/.gradle/caches/transforms-1/files-1.1/jetified-glide-4.9.0.aar/1df2095e0be2dad7b5d94736f6c11dc6/AndroidManifest.xml:10:5-20
 MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/student/.gradle/caches/transforms-1/files-1.1/jetified-gifdecoder-4.9.0.aar/c759c1a341e2165b051d52118b3ccadf/AndroidManifest.xml:9:5-20
@@ -233,6 +231,8 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/stude
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/student/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.1.0.aar/f2af99f88b4b0bc9ec0e9d50b21212d0/AndroidManifest.xml:24:5-25:19
 MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/student/.gradle/caches/transforms-1/files-1.1/jetified-library-3.2.11.aar/bbb3c9a09cce7d2c775d1f91ac7245fe/AndroidManifest.xml:18:5-28:19
 MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/student/.gradle/caches/transforms-1/files-1.1/jetified-library-3.2.11.aar/bbb3c9a09cce7d2c775d1f91ac7245fe/AndroidManifest.xml:18:5-28:19
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/student/.gradle/caches/transforms-1/files-1.1/soloader-0.6.0.aar/f4d415ac29b15fcb27e0beb81a9f14c0/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/student/.gradle/caches/transforms-1/files-1.1/soloader-0.6.0.aar/f4d415ac29b15fcb27e0beb81a9f14c0/AndroidManifest.xml:11:5-20
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.1.0] /home/student/.gradle/caches/transforms-1/files-1.1/core-1.1.0.aar/3834bf55b733f02f94f2080726cfda3f/AndroidManifest.xml:24:18-86
 	android:label
@@ -369,22 +369,6 @@ MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/student/.
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/coordinatorlayout-1.0.0.aar/b0c3a3c80a0b275f396c5c8c4ab0c056/AndroidManifest.xml:20:5-44
 MERGED from [androidx.transition:transition:1.1.0] /home/student/.gradle/caches/transforms-1/files-1.1/transition-1.1.0.aar/75dff1be7e25f0a2192de1d550998d16/AndroidManifest.xml:20:5-44
 MERGED from [androidx.transition:transition:1.1.0] /home/student/.gradle/caches/transforms-1/files-1.1/transition-1.1.0.aar/75dff1be7e25f0a2192de1d550998d16/AndroidManifest.xml:20:5-44
-MERGED from [com.facebook.fresco:fresco:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/fresco-2.0.0.aar/fb112ac8a571f5d5c3d09d9f285a7063/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:fresco:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/fresco-2.0.0.aar/fb112ac8a571f5d5c3d09d9f285a7063/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-2.0.0.aar/f4b7338c39ae09fbb9144b08fe2f0aa8/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-2.0.0.aar/f4b7338c39ae09fbb9144b08fe2f0aa8/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:drawee:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/drawee-2.0.0.aar/353ff8d2530462f2bd011ef88f04f481/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:drawee:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/drawee-2.0.0.aar/353ff8d2530462f2bd011ef88f04f481/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/nativeimagefilters-2.0.0.aar/8e03a1deadd75b3c21dfd9918744481b/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/nativeimagefilters-2.0.0.aar/8e03a1deadd75b3c21dfd9918744481b/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/imagepipeline-2.0.0.aar/c1ba99f2a092d2cea3f4841cc29d7a9f/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/imagepipeline-2.0.0.aar/c1ba99f2a092d2cea3f4841cc29d7a9f/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/nativeimagetranscoder-2.0.0.aar/854c55061c3d20215c65847af63f2b6d/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/nativeimagetranscoder-2.0.0.aar/854c55061c3d20215c65847af63f2b6d/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-2.0.0.aar/be9cfc368a4ab1640ddd5a8df624f967/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-2.0.0.aar/be9cfc368a4ab1640ddd5a8df624f967/AndroidManifest.xml:5:5-7:41
-MERGED from [com.facebook.soloader:soloader:0.6.0] /home/student/.gradle/caches/transforms-1/files-1.1/soloader-0.6.0.aar/f4d415ac29b15fcb27e0beb81a9f14c0/AndroidManifest.xml:7:5-9:41
-MERGED from [com.facebook.soloader:soloader:0.6.0] /home/student/.gradle/caches/transforms-1/files-1.1/soloader-0.6.0.aar/f4d415ac29b15fcb27e0beb81a9f14c0/AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/student/.gradle/caches/transforms-1/files-1.1/jetified-glide-4.9.0.aar/1df2095e0be2dad7b5d94736f6c11dc6/AndroidManifest.xml:6:5-8:41
 MERGED from [com.github.bumptech.glide:glide:4.9.0] /home/student/.gradle/caches/transforms-1/files-1.1/jetified-glide-4.9.0.aar/1df2095e0be2dad7b5d94736f6c11dc6/AndroidManifest.xml:6:5-8:41
 MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /home/student/.gradle/caches/transforms-1/files-1.1/jetified-gifdecoder-4.9.0.aar/c759c1a341e2165b051d52118b3ccadf/AndroidManifest.xml:5:5-7:41
@@ -445,8 +429,24 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/student/.gr
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.0.0.aar/4b1c76cad9994989ddab9e16359e1bc2/AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/core-runtime-2.0.0.aar/ca45b8b7004ccc4ef5e70f1b165653c4/AndroidManifest.xml:20:5-44
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/core-runtime-2.0.0.aar/ca45b8b7004ccc4ef5e70f1b165653c4/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-2.0.0.aar/f4b7338c39ae09fbb9144b08fe2f0aa8/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/imagepipeline-okhttp3-2.0.0.aar/f4b7338c39ae09fbb9144b08fe2f0aa8/AndroidManifest.xml:5:5-7:41
 MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/student/.gradle/caches/transforms-1/files-1.1/jetified-library-3.2.11.aar/bbb3c9a09cce7d2c775d1f91ac7245fe/AndroidManifest.xml:8:5-10:41
 MERGED from [io.nlopez.smartlocation:library:3.2.11] /home/student/.gradle/caches/transforms-1/files-1.1/jetified-library-3.2.11.aar/bbb3c9a09cce7d2c775d1f91ac7245fe/AndroidManifest.xml:8:5-10:41
+MERGED from [com.facebook.fresco:fresco:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/fresco-2.0.0.aar/fb112ac8a571f5d5c3d09d9f285a7063/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/fresco-2.0.0.aar/fb112ac8a571f5d5c3d09d9f285a7063/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/drawee-2.0.0.aar/353ff8d2530462f2bd011ef88f04f481/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/drawee-2.0.0.aar/353ff8d2530462f2bd011ef88f04f481/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/nativeimagefilters-2.0.0.aar/8e03a1deadd75b3c21dfd9918744481b/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/nativeimagefilters-2.0.0.aar/8e03a1deadd75b3c21dfd9918744481b/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/imagepipeline-2.0.0.aar/c1ba99f2a092d2cea3f4841cc29d7a9f/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/imagepipeline-2.0.0.aar/c1ba99f2a092d2cea3f4841cc29d7a9f/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/nativeimagetranscoder-2.0.0.aar/854c55061c3d20215c65847af63f2b6d/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/nativeimagetranscoder-2.0.0.aar/854c55061c3d20215c65847af63f2b6d/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-2.0.0.aar/be9cfc368a4ab1640ddd5a8df624f967/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-2.0.0.aar/be9cfc368a4ab1640ddd5a8df624f967/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/student/.gradle/caches/transforms-1/files-1.1/soloader-0.6.0.aar/f4d415ac29b15fcb27e0beb81a9f14c0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] /home/student/.gradle/caches/transforms-1/files-1.1/soloader-0.6.0.aar/f4d415ac29b15fcb27e0beb81a9f14c0/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.fresco:fbcore:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/jetified-fbcore-2.0.0.aar/f2945128c29d5e0fb65d2a4c59fbed97/AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.fresco:fbcore:2.0.0] /home/student/.gradle/caches/transforms-1/files-1.1/jetified-fbcore-2.0.0.aar/f2945128c29d5e0fb65d2a4c59fbed97/AndroidManifest.xml:5:5-7:41
 INJECTED from /home/student/CodeSchool/IdeaProjects/react_native/rn_native_rumy/rumy_test/rumy2.0/android/app/src/main/AndroidManifest.xml

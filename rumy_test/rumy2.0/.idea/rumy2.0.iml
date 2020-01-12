@@ -6,8 +6,8 @@
     </facet>
     <facet type="android" name="Android">
       <configuration>
-        <option name="GEN_FOLDER_RELATIVE_PATH_APT" value="/../../rumy2.0/gen" />
-        <option name="GEN_FOLDER_RELATIVE_PATH_AIDL" value="/../../rumy2.0/gen" />
+        <option name="GEN_FOLDER_RELATIVE_PATH_APT" value="/../gen" />
+        <option name="GEN_FOLDER_RELATIVE_PATH_AIDL" value="/../gen" />
         <option name="MANIFEST_FILE_RELATIVE_PATH" value="/../../rumy2.0/AndroidManifest.xml" />
         <option name="RES_FOLDER_RELATIVE_PATH" value="/../../rumy2.0/res" />
         <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/../../rumy2.0/assets" />
@@ -20,6 +20,23 @@
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/gen" isTestSource="false" generated="true" />
+      <excludeFolder url="file://$MODULE_DIR$/.expo" />
+      <excludeFolder url="file://$MODULE_DIR$/.expo-shared" />
+      <excludeFolder url="file://$MODULE_DIR$/.gitignore" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea" />
+      <excludeFolder url="file://$MODULE_DIR$/App.js" />
+      <excludeFolder url="file://$MODULE_DIR$/Components" />
+      <excludeFolder url="file://$MODULE_DIR$/android" />
+      <excludeFolder url="file://$MODULE_DIR$/app.json" />
+      <excludeFolder url="file://$MODULE_DIR$/assets" />
+      <excludeFolder url="file://$MODULE_DIR$/babel.config.js" />
+      <excludeFolder url="file://$MODULE_DIR$/index.js" />
+      <excludeFolder url="file://$MODULE_DIR$/ios" />
+      <excludeFolder url="file://$MODULE_DIR$/node_modules" />
+      <excludeFolder url="file://$MODULE_DIR$/package-lock.json" />
+      <excludeFolder url="file://$MODULE_DIR$/package.json" />
+      <excludeFolder url="file://$MODULE_DIR$/rumy_project" />
+      <excludeFolder url="file://$MODULE_DIR$/screens" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.6" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

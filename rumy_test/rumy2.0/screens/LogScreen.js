@@ -1,5 +1,6 @@
 import React, {  Component  } from 'react'
 import {LinearGradient} from "expo-linear-gradient";
+import { createStackNavigator, createAppContainer } from 'react-navigation'; // Version can be specified in package.json
 
 import {View, TextInput, Text, StyleSheet, Image,
     TouchableWithoutFeedback, SafeAreaView, Keyboard,
@@ -9,8 +10,9 @@ import Forms from "../Components/Forms";
 const {width: WIDTH} = Dimensions.get('window');
 
 class LogScreen extends Component  {
+
     render() {
-        const url = "http://10.0.0.9:8000/user";
+        const url = "http://10.0.0.3:8000/user";
         try {
             getConsole = () => {
                 fetch(url, {
@@ -25,6 +27,8 @@ class LogScreen extends Component  {
         } catch (error) {
             console.log("found error " + error)
         }
+
+
         //     getConsole = () => {
         //         console.log('log')
         //     }

@@ -80,7 +80,7 @@ class Login extends Component {
       return (
           <TouchableOpacity activeOpacity={0.8}>
               <View style={styles.moveButton}>
-                  <Text style={styles.editButton} onPress={() => navigate('LogScreen')}>Login</Text>
+                  <Text style={styles.editButton} onPress={() => this.props.navigation.navigate('LogScreen')}>Login</Text>
               </View>
           </TouchableOpacity>
       )
