@@ -38,6 +38,7 @@ class MapScreen extends Component {
                 this.setState({
                     initialRegion: region
                 });
+
                 // const url = "http://10.0.0.3:8000/coordinate/";
                 // fetch(url, {
                 //     method: 'POST',
@@ -199,7 +200,7 @@ class MapScreen extends Component {
                     </MapView>
 
                     <View style={styles.moveButton}>
-                        <Text style={styles.editButton} onPress={() => this.fetchLocations()}>Grab Locations</Text>
+                        <Text style={styles.editButton} onPress={() => this.fetchLocations()}>Grab Coordinates</Text>
                         {/*    <Button title={'please'} style={styles.editButton}/>*/}
                     </View>
 

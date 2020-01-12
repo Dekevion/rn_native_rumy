@@ -8,6 +8,7 @@ import {
 import Forms from "../Components/Forms";
 import {LinearGradient} from "expo-linear-gradient";
 import Icon from "react-native-vector-icons/Ionicons";
+// import MapScreen from "./screens/MapScreen";
 const {width: WIDTH} = Dimensions.get('window');
 class SignupScreen extends Component  {
     constructor() {
@@ -58,8 +59,30 @@ class SignupScreen extends Component  {
                     'Content-Type': 'application/json'
                 }
             })
-                .then(data => data.json());
+                .then(data => data.json())
+                .then(response => {
+                    console.log("response 1");
+                    if (response === false) {
+                        this.setState({new_user_error_msg: "Username is already taken!"});
+                    } else {
+                        console.log("response 2" + response);
+                        this.setState({
+                            name: response.name,
+                            userID: response.id,
+                            isLoggedIn: true
+                        })
+                        console.log("State Changes: Name " + this.state.name);
+                        console.log("State Changes: Is Logged In " + this.state.isLoggedIn);
+                        console.log("State Changes: User ID " + this.state.userID);
 
+                        console.log(".THEN RESPONSES: " + response.name)
+                    }
+                })
+                // .then((userBody) => {
+                //     this.props.navigator.push({
+                //         component: Mapscreen
+                //     })
+                // })
 
 
 
