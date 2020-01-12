@@ -38,6 +38,8 @@ class MapScreen extends Component {
                 this.setState({
                     initialRegion: region
                 });
+                console.log("Region State Object: Latidude: " + this.state.initialRegion.latitude)
+                console.log("Region State Object: Longitude " + this.state.initialRegion.longitude)
 
                 // const url = "http://10.0.0.3:8000/coordinate/";
                 // fetch(url, {
@@ -113,7 +115,6 @@ class MapScreen extends Component {
     //         })
     //     })
     //         .then(response => console.log(response))
-    //         .catch(err => console.log(err))
     //
     //     }
 
@@ -171,7 +172,43 @@ class MapScreen extends Component {
 
 
     }
+    sendU1Coords = () => {
+        console.log("I'm User 1")
+        const url = "http://10.0.0.3:8000/user/1";
+        const latty = this.state.initialRegion.latitude
+        const long = this.state.initialRegion.longitude
+        console.log("long " + long)
+        console.log("latty: " + latty)
 
+        fetch(url, {
+            method: 'GET',
+            headers: {
+                Accept: 'application/json',
+            }
+        })
+            .then(data => data.json())
+            .then(response => console.log(response))
+
+
+
+
+// POST METHOD
+        // fetch(url, {
+        //         method: 'POST',
+        //         body: JSON.stringify({
+        //           latitude: latty,
+        //             longitude: long
+        //         }),
+        //     headers: {
+        //         'Accept': 'application/json',
+        //         'Content-Type': 'application/json'
+        //     }
+        //     })
+    }
+
+    sendU2Coords = () => {
+        console.log("I'm User 2")
+    }
     render() {
 
         return (
@@ -198,11 +235,25 @@ class MapScreen extends Component {
                         {/*{this.state.markers.map((marker, index) => ( <MapView.Marker key={index} coordinate={marker.coordinates} title={marker.title} /> ))}*/}
 
                     </MapView>
+                    <View style ={styles.buttonContainer}>
 
-                    <View style={styles.moveButton}>
-                        <Text style={styles.editButton} onPress={() => this.fetchLocations()}>Grab Coordinates</Text>
-                        {/*    <Button title={'please'} style={styles.editButton}/>*/}
+                        <View style={styles.user2Button}>
+                            <Text style={styles.editButton3} onPress={() => this.sendU1Coords()}>User 1 Coords</Text>
+                            {/*    <Button title={'please'} style={styles.editButton}/>*/}
+                        </View>
+
+                        <View style={styles.user1Button}>
+                            <Text style={styles.editButton2} onPress={() => this.sendU2Coords()}>User 2 Coords</Text>
+                            {/*    <Button title={'please'} style={styles.editButton}/>*/}
+                        </View>
+
+                        <View style={styles.moveButton}>
+                            <Text style={styles.editButton} onPress={() => this.fetchLocations()}>Grab Coordinates</Text>
+                            {/*    <Button title={'please'} style={styles.editButton}/>*/}
+                        </View>
+
                     </View>
+
 
                 </View>
             </LinearGradient>
@@ -237,7 +288,7 @@ const styles = StyleSheet.create({
         right: 0,
         bottom: 0,
         width: '100%',
-        height: 610
+        height: 570
 
     },
     editButton: {
@@ -250,11 +301,40 @@ const styles = StyleSheet.create({
         padding: 1
     },
     moveButton: {
-        marginVertical: '177%',
+        marginVertical: '179%',
         justifyContent: 'center',
         alignItems: 'center'
 
+    },
+    user1Button: {
+        alignSelf: 'flex-end',
+        position: 'absolute',
+        bottom: 695,
+        left: 200,
+        backgroundColor: "#ffffff",
+        borderRadius: 50,
+        padding: 1.9,
+        fontSize: 20,
+
+    },
+    user2Button: {
+        alignSelf: 'flex-end',
+        position: 'absolute',
+        bottom: 695,
+        left: 40,
+        backgroundColor: "#fff6f6",
+        borderRadius: 50,
+        padding: 1.9,
+        fontSize: 25,
+
+    },
+    editButton2: {
+        color: 'blue'
+    },
+    editButton3: {
+        color: 'red'
     }
+
 });
 
 export default MapScreen

@@ -49,8 +49,6 @@ class SignupScreen extends Component  {
             fetch(url, {
                 method: 'POST',
                 body: JSON.stringify({
-                    // latitude: this.state.initialRegion.latitude,
-                    // longitude: this.state.initialRegion.longitude
                     name: userBody.name,
                     password: userBody.password
                 }),
