@@ -279,13 +279,13 @@ class MapScreen extends Component {
 
                     >
 
-                                <Marker coordinate={{latitude:35.01852790, longitude: -89.78661620}} title={"Dekevion"}/>
-                                <Marker coordinate={{latitude:35.01952690, longitude:-89.78681620}} title={"Vishal"}/>
-                                <Marker coordinate={{latitude:35.01984790, longitude:-89.78632620}} title={"George"}/>
+                                <Marker coordinate={{latitude:35.01852790, longitude: -89.78661620}} title={"User1"}/>
+                                <Marker coordinate={{latitude:35.01952690, longitude:-89.78681620}} title={"User2"}/>
+                                <Marker coordinate={{latitude:35.01984790, longitude:-89.78632620}} title={"User3"}/>
 
                                 {/*UofM Coordinates*/}
-                        <Marker coordinate={{latitude:35.1187, longitude:-89.9375}} title={"Shelly"}/>
-                        <Marker coordinate={{latitude:35.1189, longitude:-89.9375}} title={"Maria"}/>
+                        <Marker coordinate={{latitude:35.1187, longitude:-89.9375}} title={"User4"}/>
+                        <Marker coordinate={{latitude:35.1189, longitude:-89.9375}} title={"User5"}/>
 
 
                         {/*{this.displayMarkers()}*/}
