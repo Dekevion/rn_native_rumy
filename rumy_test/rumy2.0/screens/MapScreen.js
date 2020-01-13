@@ -19,7 +19,7 @@ class MapScreen extends Component {
             latitude: null,
             longitude: null,
             error: null,
-            array: [],
+            coordinatesArray: [],
            markers: [],
         };
 
@@ -96,8 +96,18 @@ class MapScreen extends Component {
 
         }
 
+
     }
 
+    // displayMarkers = () => {
+    //     return this.state.markers.map((store, index) => {
+    //         return <Marker key={index} id={index} position={{
+    //             lat: store.latitude,
+    //             lng: store.longitude
+    //         }}
+    //                        onClick={() => console.log("You clicked me!")} />
+    //     })
+    // }
     // goToInitialLocation() {
     //     let initialRegion = Object.assign({}, this.state.initialRegion);
     //     initialRegion["latitudeDelta"] = 0.005;
@@ -174,20 +184,51 @@ class MapScreen extends Component {
     }
     sendU1Coords = () => {
         console.log("I'm User 1")
-        const url = "http://10.0.0.3:8000/user/1";
+        const url1 = "http://10.0.0.3:8000/coordinate/";
         const latty = this.state.initialRegion.latitude
         const long = this.state.initialRegion.longitude
         console.log("long " + long)
         console.log("latty: " + latty)
 
-        fetch(url, {
+        fetch(url1, {
             method: 'GET',
             headers: {
                 Accept: 'application/json',
             }
         })
             .then(data => data.json())
-            .then(response => console.log(response))
+            // .then(response => console.log( "User 1 latitude Response: " + response))
+
+            // .then(response => {
+            //     return this.state.response.map((return this.state.stores.map((store, index) => {
+            //         return <Marker key={index} id={index} position={{
+            //             lat: store.latitude,
+            //             lng: store.longitude
+            //         }))
+            // }
+        // Map Markers True Attempt 1
+        //     .then(response => {
+        //         this.setState({markers: response})
+        //         console.log("markers: " + this.state.markers)
+        //     })
+
+
+
+            // .then(response => {
+            //     let u1collection = {}
+            //     u1collection.latitude = response.latitude
+            //     u1collection.longitude = response.longitude
+            //     // let u1long = response.longitude
+            //     // let u1lat = response.latitude
+            //     this.setState({coordinatesArray: u1collection})
+            //     console.log("Coordinates Array State Object Latitude: " + this.state.coordinatesArray.latitude)
+            //     console.log("Coordinates Array State Object Longitude: " + this.state.coordinatesArray.longitude)
+            //
+            //     console.log("Collection Object User1 Latitude : " + u1collection.latitude)
+            //     console.log("Collection Object User1 longitude: " + u1collection.longitude)
+            //
+            // })
+            // Try to Map the Markers
 
 
 
@@ -208,7 +249,20 @@ class MapScreen extends Component {
 
     sendU2Coords = () => {
         console.log("I'm User 2")
+        const url2 = "http://10.0.0.3:8000/user/2";
+
+        fetch(url2, {
+            method: 'GET',
+            headers: {
+                Accept: 'application/json',
+            }
+        })
+            .then(data => data.json())
+            .then(response => console.log(response))
+
     }
+    // let userLocationMarker = null;
+
     render() {
 
         return (
@@ -222,37 +276,54 @@ class MapScreen extends Component {
                              zoomEnabled={true}
                              showsUserLocation={true}
 
-                    >
 
-                    <Marker coordinate={{latitude:35.13882623, longitude: -90.0387654}} title={"I'm Here!"}/>
-                        <Marker coordinate={{latitude:35.19682623, longitude: -90.1287654}} title={"I'm Here!"}/>
-                        <Marker coordinate={{latitude:35.18684625, longitude: -90.3277654}} title={"I'm Here!"}/>
-                        <Marker coordinate={{latitude:35.18682623, longitude: -90.2277654}} title={"I'm Here!"}/>
-                        <Marker coordinate={{latitude:35.138888, longitude: -90.038973}} title={"I'm Here!"}/>
+                    >
+                                <Marker coordinate={{latitude:35.01852790, longitude: -89.78661620}} title={"Dekevion"}/>
+                                <Marker coordinate={{latitude:35.01952690, longitude:-89.78681620}} title={"Vishal"}/>
+                        {/*{this.displayMarkers()}*/}
+                        {/*{this.state.markers && this.state.markers.map((marker, index) => (*/}
+                        {/*    <Marker*/}
+                        {/*        key={index}*/}
+                        {/*        coordinate={{*/}
+                        {/*            latitude: Number(marker.latitude),*/}
+                        {/*            longitude: Number(marker.longitude),*/}
+                        {/*        }}*/}
+                        {/*    />*/}
+                        {/*))}*/}
+
+                    {/*<Marker coordinate={{latitude:this.state.coordinatesArray.latitude, longitude: this.state.coordinatesArray.longitude*/}
+
+                    {/*}} title={"I'm Here!"}/>*/}
+
+                        {/*<Marker coordinate={{latitude:35.19682623, longitude: -90.1287654}} title={"I'm Here!"}/>*/}
+                    {/*    <Marker coordinate={{latitude:35.18684625, longitude: -90.3277654}} title={"I'm Here!"}/>*/}
+                    {/*    <Marker coordinate={{latitude:35.18682623, longitude: -90.2277654}} title={"I'm Here!"}/>*/}
+                    {/*    <Marker coordinate={{latitude:35.138888, longitude: -90.038973}} title={"I'm Here!"}/>*/}
 
 
 
                         {/*{this.state.markers.map((marker, index) => ( <MapView.Marker key={index} coordinate={marker.coordinates} title={marker.title} /> ))}*/}
 
                     </MapView>
-                    <View style ={styles.buttonContainer}>
 
-                        <View style={styles.user2Button}>
-                            <Text style={styles.editButton3} onPress={() => this.sendU1Coords()}>User 1 Coords</Text>
-                            {/*    <Button title={'please'} style={styles.editButton}/>*/}
-                        </View>
+                    {/*<View style ={styles.buttonContainer}>*/}
 
-                        <View style={styles.user1Button}>
-                            <Text style={styles.editButton2} onPress={() => this.sendU2Coords()}>User 2 Coords</Text>
-                            {/*    <Button title={'please'} style={styles.editButton}/>*/}
-                        </View>
+                    {/*    <View style={styles.user2Button}>*/}
+                    {/*        <Text style={styles.editButton3} onPress={() => this.sendU1Coords()}>User 1 Coords</Text>*/}
+                    {/*        /!*    <Button title={'please'} style={styles.editButton}/>*!/*/}
+                    {/*    </View>*/}
 
-                        <View style={styles.moveButton}>
-                            <Text style={styles.editButton} onPress={() => this.fetchLocations()}>Grab Coordinates</Text>
-                            {/*    <Button title={'please'} style={styles.editButton}/>*/}
-                        </View>
+                    {/*    <View style={styles.user1Button}>*/}
+                    {/*        <Text style={styles.editButton2} onPress={() => this.sendU2Coords()}>User 2 Coords</Text>*/}
+                    {/*        /!*    <Button title={'please'} style={styles.editButton}/>*!/*/}
+                    {/*    </View>*/}
 
-                    </View>
+                    {/*    <View style={styles.moveButton}>*/}
+                    {/*        <Text style={styles.editButton} onPress={() => this.fetchLocations()}>Grab Coordinates</Text>*/}
+                    {/*        /!*    <Button title={'please'} style={styles.editButton}/>*!/*/}
+                    {/*    </View>*/}
+
+                    {/*</View>*/}
 
 
                 </View>
@@ -288,7 +359,7 @@ const styles = StyleSheet.create({
         right: 0,
         bottom: 0,
         width: '100%',
-        height: 570
+        height: 700
 
     },
     editButton: {
