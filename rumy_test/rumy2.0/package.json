@@ -12,7 +12,7 @@
     "expo-linear-gradient": "latest",
     "react": "~16.9.0",
     "react-dom": "~16.9.0",
-    "react-native": "~0.61.4",
+    "react-native": "~0.62.3",
     "react-native-gesture-handler": "^1.5.3",
     "react-native-maps": "0.26.1",
     "react-native-material-design": "^0.3.7",
